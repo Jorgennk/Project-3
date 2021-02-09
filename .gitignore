@@ -1,0 +1,16 @@
+bin/
+target/
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
+.classpath
+**/.classpath
+.settings
+**/.settings
+.project
+**/.project
+**/target/
+*.iml
+**/*.iml
+venv/
