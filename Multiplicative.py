@@ -1,13 +1,27 @@
+"""
+A Multiplicative way of encrypting a message using simple multiplication on the character values
+"""
+
 from Cipher import Cipher
-import time
 
 
 class Multiplicative(Cipher):
+    """
+    The class for multiplicative encrypting
+    """
 
     def __init__(self):
+        """
+        Basic constructor with values from super (Cipher)
+        """
         super().__init__()
 
     def encode(self):
+        """
+        This is a simple function for encoding a string from self.message. It changes the self.message to the encrypted,
+        but also prints the last value for confirmation
+        :return: None
+        """
         tmp_msg = self.message
         print(self.message)
         self.message = ""
@@ -23,11 +37,20 @@ class Multiplicative(Cipher):
                 self.message += " "
 
     def find_val(self, number):
+        """
+        Finds the number corresponding with the unencrypted letter in the encrypted test
+        :param number: the character value of the current letter
+        :return: the unencrypted character calue
+        """
         for i in range(26 * self.key):
             if number == (i * self.key) % 26:
                 return i
 
     def decode(self):
+        """
+        Decodes an encrypted string placed in self.message
+        :return: None
+        """
         tmp_msg = self.message
         self.message = ""
 
@@ -40,6 +63,10 @@ class Multiplicative(Cipher):
                 self.message += " "
 
     def print_multi(self):
+        """
+        Prints the current message
+        :return: None
+        """
         if self.message:
             print(self.message)
         else:

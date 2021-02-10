@@ -1,9 +1,11 @@
-
+"""
+Who cares about this file lol
+"""
 
 
 a = {
     1: "a",
     2: "b"
 }
-print(list(list(a.values())))
-print(a[1])
+print("abcdefghijklmnopqrstuvwxyz".upper())
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
