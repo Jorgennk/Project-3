@@ -1,9 +1,9 @@
 
 
 
-liste = "aa"
-
-if not liste:
-    print("1")
-else:
-    print("2")
+a = {
+    1: "a",
+    2: "b"
+}
+print(list(list(a.values())))
+print(a[1])

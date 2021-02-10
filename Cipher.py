@@ -3,7 +3,6 @@ class Cipher:
     def __init__(self):
         self.key = ""
         self.message = ""
-        self.encoded_message = ""
         self.alphabet = {
             0: "A",
             1: "B",
@@ -34,13 +33,19 @@ class Cipher:
         }
 
     def set_key(self, key_to_be_set):
-        self.key = key_to_be_set
+        self.key = int(key_to_be_set)
 
     def get_key(self):
         return self.key
 
+    def get_message(self):
+        return self.message
+
     def operate_cipher(self):
         pass
 
-    def set_message(self, input):
-        self.message = input
+    def set_message(self, input_message):
+        self.message = input_message
+
+    def print_message(self):
+        print(self.message)
